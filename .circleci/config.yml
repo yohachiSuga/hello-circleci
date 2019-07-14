@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-        command: |
-          mkdir -p ./aosp
-          cd ./aosp
-          repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
-          repo sync
+          command: |
+            mkdir -p ./aosp
+            cd ./aosp
+            repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
+            repo sync
