@@ -13,3 +13,6 @@ jobs:
             cd ./aosp
             repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
             repo sync
+            source build/envsetup.sh
+            lunch aosp_car_arm-userdebug
+            make -j4
