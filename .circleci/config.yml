@@ -1,4 +1,4 @@
-version: 2.1
+version: 2.0
 jobs:
   build:
     docker:
@@ -7,6 +7,8 @@ jobs:
       - checkout
       - run:
           command: |
+            git config --global user.name "sample"
+            git config --global user.email "sample@gmail.com"
             mkdir -p ./aosp
             cd ./aosp
             repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
