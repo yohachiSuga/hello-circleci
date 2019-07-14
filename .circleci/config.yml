@@ -2,7 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:4.8.2
+      - image: gmacario/build-aosp
     steps:
       - checkout
-      - run: echo "hello world"
+      - run:
+        command: |
+          mkdir -p ./aosp
+          cd ./aosp
+          repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
+          repo sync
