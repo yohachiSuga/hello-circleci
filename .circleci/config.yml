@@ -11,7 +11,7 @@ jobs:
             git config --global user.email "sample@gmail.com"
             mkdir -p ./aosp
             cd ./aosp
-            repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r1
+            repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r45
             repo sync
             source build/envsetup.sh
             lunch aosp_car_arm-userdebug
